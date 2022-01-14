@@ -41,7 +41,6 @@ class Curator
   end
 
   def artists_with_multiple_photographs
-    photographs_by_artist
     photographs_by_artist.find_all do |key, value|
       return[key.name] if value.size > 1
     end
